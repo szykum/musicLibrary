@@ -8,7 +8,7 @@ body{
 header{
   background-color: red;
   width: 80%;
-  height: 250px;
+  height: 300px;
   margin-left: 10%;
 }
 
@@ -28,7 +28,7 @@ header{
   display: block;
   float:right;
   background-color: orange;
-  height: 200px;
+  padding: 50px 70px 50px 70px;
 }
 
 .add-album input{
@@ -39,4 +39,29 @@ header{
 h2{
  color: white;
  text-align: center;
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  overflow: hidden;
+}
+
+.insideSlider{
+  width: 400%;
+  height: 100%;
+  position: relative;
+  left: -100%;
+}
+
+.item {
+  width: calc(100%/4);
+  height: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  float: left;
 }

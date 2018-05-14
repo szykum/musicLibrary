@@ -6,10 +6,18 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="style/style.css">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="src/slider.js"></script>
   </head>
   <body>
     <header>
-
+      <div class="slider">
+        <div class="insideSlider">
+          <div class="item"><img src="images/1.jpg"/></div>
+          <div class="item"><img src="images/2.jpg"/></div>
+          <div class="item"><img src="images/3.jpg"/></div>
+          <div class="item"><img src="images/4.jpg"/></div>
+        </div>
     </header>
 
     <div class="row main-content">
