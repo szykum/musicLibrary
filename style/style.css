@@ -18,17 +18,42 @@ header{
 }
 
 .form-panel{
+  border-radius: 25px;
   display: block;
   float:left;
-  background-color: blue;
-  padding-bottom: 10px;
+  background-color: rgba(35, 66, 168,0.5);
+  margin: 20px 10px 0 0;
+  padding-bottom: 20px;
 }
 
 .result-table{
+  border-radius: 25px;
+  margin-top: 20px;
   display: block;
   float:right;
-  background-color: orange;
+  color: black;
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 50px 70px 50px 70px;
+}
+
+.table{
+  color: rgb(209, 209, 209);
+  background-color: rgba(255, 93, 0,0.4);
+  border-radius: 15px;
+  border-style: hidden;
+  box-shadow: 0 0 0 1px white;
+  padding-right: 0px;
+  text-align: center;
+  table-layout:fixed;
+  width: 100%;
+}
+
+.table td{
+  word-wrap: break-word;
+}
+
+th{
+  text-align: center;
 }
 
 .add-album input{
