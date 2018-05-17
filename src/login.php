@@ -1,14 +1,7 @@
 <?php
-
-if(isset($_REQUEST['login']) && isset($_REQUEST['password']))
+$db = new Mysqli('localhost', 'root', '', 'musiclibrary');
+if(isset($_SESSION['login']))
 {
-  $login = $_REQUEST['login'];
-  $haslo = md5($_REQUEST['password']);
-  $db = new Mysqli('localhost', 'root', '', 'musiclibrary');
-  $q = "SELECT * FROM user WHERE login = '$login' AND password = '$haslo'";
-  $result = $db->query($q);
-  if($result->num_rows === 1){
-     echo "<script>alert('Successfully logged in');</script>";
      $selectID = "SELECT id FROM `user` WHERE login='admin'";
      $getID = $db->query($selectID);
      $getID = $getID->fetch_assoc();
@@ -36,8 +29,31 @@ if(isset($_REQUEST['login']) && isset($_REQUEST['password']))
         }
         echo " </tbody>
               </table>";
+
+        echo "<form action='index.php' method='post'>
+          <input type='hidden' name='logout'>
+          <input class='btn btn-default' type='submit' value='LOGOUT'>
+        </form>";
+}
+else if(isset($_REQUEST['login']) && isset($_REQUEST['password'])){
+  $login = $_REQUEST['login'];
+  $haslo = md5($_REQUEST['password']);
+  $q = "SELECT * FROM user WHERE login = '$login' AND password = '$haslo'";
+  $result = $db->query($q);
+  if($result->num_rows === 1){
+    $_SESSION['login'] = $login;
+    echo "<script>alert('Successfully logged in');</script>";
+      echo "<meta http-equiv='refresh' content='0'>";
   }
   else echo "<script>alert('Incorrect login or password');</script>";
-
 }
+else {
+  echo "<h2>Log In</h2>
+  <form  method='post'>
+    <input class='form-control' type='text' name='login' placeholder='user'>
+    <input class='form-control' type='password' name='password' placeholder='password'>
+    <input type='submit' class='btn btn-default' name='' value='Login'>
+  </form>";
+}
+
  ?>
