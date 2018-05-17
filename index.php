@@ -33,36 +33,15 @@
       </aside>
 
       <article class="col-md-8 result-table">
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th>Artist</th>
-              <th>Album</th>
-              <th>Release Year</th>
-              <th>Annotation</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>gbbgbb</td>
-              <td>Doe</td>
-              <td>2412</td>
-              <td>nnnn</td>
-            </tr>
-            <tr>
-              <td>Mary</td>
-              <td>ghgfggb</td>
-              <td>2412</td>
-              <td>2412</td>
-            </tr>
-            <tr>
-              <td>July</td>
-              <td>Dooley</td>
-              <td>2412</td>
-              <td>2412</td>
-            </tr>
-          </tbody>
-        </table>
+        <h2>Log In</h2>
+        <form action="#" method="post">
+          <input class="form-control" type="text" name="login" placeholder="user">
+          <input class="form-control" type="password" name="password" placeholder="password">
+          <input type="submit" class="btn btn-default" name="" value="Login">
+        </form>
+        <?php include 'src/login.php' ?>
+
+        
       </article>
 
     </div>
