@@ -1,4 +1,5 @@
 <?php
+include 'remove.php';
 $db = new Mysqli('localhost', 'root', '', 'musiclibrary');
 if(isset($_SESSION['login']))
 {
@@ -22,6 +23,7 @@ if(isset($_SESSION['login']))
              <th>Album</th>
              <th>Release Year</th>
              <th>Annotation</th>
+             <th>Action</th>
            </tr>
          </thead>
          <tbody>";
@@ -29,7 +31,14 @@ if(isset($_SESSION['login']))
           echo "<tr>";
           for($i = 1; $i<5;$i++)
             echo "<td>". $row[$i] . "</td>";
-          echo "</tr>";
+            $id = $row[0];
+    echo "<td>
+        <form action='index.php' method='post'>
+          <input type='hidden' name='remove' value='$id'>
+          <input class='btn btn-default' type='submit' value='Remove'>
+        </form>
+          </td>";
+    echo "</tr>";
         }
         echo " </tbody>
               </table>";

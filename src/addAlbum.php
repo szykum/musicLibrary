@@ -22,7 +22,5 @@ if(isset($_REQUEST['artist']) && isset($_REQUEST['album']) && isset($_REQUEST['r
     if($result) echo "<script>alert('Successfully added');</script>";
     else  echo "<script>alert('Something went wrong');</script>";
   }
-  else  echo "<script>alert('Already exist in library');</script>";
-
 }
  ?>
