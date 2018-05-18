@@ -96,3 +96,7 @@ h2{
   font-size: 100px;
   float: left;
 }
+
+tr:hover{
+  background: rgba(255, 110, 0, 0.5);
+}

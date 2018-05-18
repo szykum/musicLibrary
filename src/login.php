@@ -2,6 +2,10 @@
 $db = new Mysqli('localhost', 'root', '', 'musiclibrary');
 if(isset($_SESSION['login']))
 {
+  echo "<form action='index.php' method='post'>
+    <input type='hidden' name='logout'>
+    <input class='btn btn-default' type='submit' value='LOGOUT'>
+  </form>";
      $selectID = "SELECT id FROM `user` WHERE login='admin'";
      $getID = $db->query($selectID);
      $getID = $getID->fetch_assoc();
@@ -30,10 +34,7 @@ if(isset($_SESSION['login']))
         echo " </tbody>
               </table>";
 
-        echo "<form action='index.php' method='post'>
-          <input type='hidden' name='logout'>
-          <input class='btn btn-default' type='submit' value='LOGOUT'>
-        </form>";
+
 }
 else if(isset($_REQUEST['login']) && isset($_REQUEST['password'])){
   $login = $_REQUEST['login'];
@@ -45,7 +46,10 @@ else if(isset($_REQUEST['login']) && isset($_REQUEST['password'])){
     echo "<script>alert('Successfully logged in');</script>";
       echo "<meta http-equiv='refresh' content='0'>";
   }
-  else echo "<script>alert('Incorrect login or password');</script>";
+  else{
+    echo "<script>alert('Incorrect login or password');</script>";
+    echo "<meta http-equiv='refresh' content='0'>";
+  }
 }
 else {
   echo "<h2>Log In</h2>
