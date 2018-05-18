@@ -3,16 +3,18 @@ include 'remove.php';
 $db = new Mysqli('localhost', 'root', '', 'musiclibrary');
 if(isset($_SESSION['login']))
 {
+  $login = $_SESSION['login'];
+  //echo $_SESSION['login'];
   echo "<form action='index.php' method='post'>
     <input type='hidden' name='logout'>
     <input class='btn btn-default' type='submit' value='LOGOUT'>
   </form>";
-     $selectID = "SELECT id FROM `user` WHERE login='admin'";
+     $selectID = "SELECT id FROM `user` WHERE login='$login'";
      $getID = $db->query($selectID);
      $getID = $getID->fetch_assoc();
      $getID = $getID["id"];
      //echo $getID;
-     $selectAlbums = "SELECT * FROM album WHERE ownerID = $getID";
+     $selectAlbums = "SELECT * FROM album WHERE ownerID = '$getID'";
      $getAlbums = $db->query($selectAlbums);
      //$getAlbums = $getAlbums->fetch_assoc();
      echo "
@@ -47,13 +49,13 @@ if(isset($_SESSION['login']))
 }
 else if(isset($_REQUEST['login']) && isset($_REQUEST['password'])){
   $login = $_REQUEST['login'];
-  $haslo = md5($_REQUEST['password']);
-  $q = "SELECT * FROM user WHERE login = '$login' AND password = '$haslo'";
+  $pswd = md5($_REQUEST['password']);
+  $q = "SELECT * FROM user WHERE login = '$login' AND password = '$pswd'";
   $result = $db->query($q);
   if($result->num_rows === 1){
     $_SESSION['login'] = $login;
     echo "<script>alert('Successfully logged in');</script>";
-      echo "<meta http-equiv='refresh' content='0'>";
+    echo "<meta http-equiv='refresh' content='0'>";
   }
   else{
     echo "<script>alert('Incorrect login or password');</script>";

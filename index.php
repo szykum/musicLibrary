@@ -42,6 +42,8 @@
             <input type="password" class="form-control" name="newPassword" placeholder="Password" ><br>
             <input type="password" class="form-control" name="adminPassword" placeholder="Admin Password" ><br>
             <input type="submit" class="btn btn-default" value="ADD USER">
+            <?php include 'src/addUser.php' ?>
+
           </form>
         </div>
       </aside>
