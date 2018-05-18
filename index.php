@@ -29,7 +29,7 @@
             <input type="text" class="form-control" name="artist" placeholder="Artist" ><br>
             <input type="text" class="form-control" name="album" placeholder="Album" ><br>
             <input type="number" class="form-control" name="release-year" placeholder="Release Year" ><br>
-            <input type="text" class="form-control" name="description" placeholder="Description" ><br>
+            <input type="text" class="form-control" name="description" placeholder="Link to album Cover" ><br>
             <input type="submit" class="btn btn-default" value="ADD ALBUM">
           </form>
           <?php include 'src/addAlbum.php' ?>

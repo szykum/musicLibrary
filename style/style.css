@@ -46,8 +46,12 @@ header{
   text-align: center;
   table-layout:fixed;
   width: 100%;
-}
 
+}
+.table > tbody > tr > td{
+  vertical-align: middle;
+  line-height: normal;
+}
 .table td{
   word-wrap: break-word;
 }
@@ -60,9 +64,13 @@ th{
   margin-left:10%;
 }
 
-.result-table input{
+.loginForm input{
   display: inline;
   width: 30%;
+  margin: 0 0 15px 5px;
+}
+.logoutForm input{
+  width: 100%;
   margin: 0 0 15px 5px;
 }
 

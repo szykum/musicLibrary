@@ -5,7 +5,7 @@ if(isset($_SESSION['login']))
 {
   $login = $_SESSION['login'];
   //echo $_SESSION['login'];
-  echo "<form action='index.php' method='post'>
+  echo "<form action='index.php' method='post' class='logoutForm'>
     <input type='hidden' name='logout'>
     <input class='btn btn-default' type='submit' value='LOGOUT'>
   </form>";
@@ -16,22 +16,22 @@ if(isset($_SESSION['login']))
      //echo $getID;
      $selectAlbums = "SELECT * FROM album WHERE ownerID = '$getID'";
      $getAlbums = $db->query($selectAlbums);
-     //$getAlbums = $getAlbums->fetch_assoc();
      echo "
        <table class='table table-bordered'>
          <thead>
            <tr>
+             <th>Cover</th>
              <th>Artist</th>
              <th>Album</th>
              <th>Release Year</th>
-             <th>Annotation</th>
              <th>Action</th>
            </tr>
          </thead>
          <tbody>";
         while($row = $getAlbums->fetch_row()){
           echo "<tr>";
-          for($i = 1; $i<5;$i++)
+          echo "<td> <img src='". $row[4] . "'height=100 width=100 alt='Album Cover'> </td>";
+          for($i = 1; $i<4;$i++)
             echo "<td>". $row[$i] . "</td>";
             $id = $row[0];
     echo "<td>
@@ -64,7 +64,7 @@ else if(isset($_REQUEST['login']) && isset($_REQUEST['password'])){
 }
 else {
   echo "<h2>Log In</h2>
-  <form  method='post'>
+  <form  method='post' class='loginForm'>
     <input class='form-control' type='text' name='login' placeholder='user'>
     <input class='form-control' type='password' name='password' placeholder='password'>
     <input type='submit' class='btn btn-default' name='' value='Login'>
