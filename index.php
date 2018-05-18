@@ -22,18 +22,29 @@
     </header>
 
     <div class="row main-content">
-      <aside class="col-md-3 form-panel">
-        <h2>ADD ALBUM</h2>
-        <form class="add-album" action="index.php" method="post">
-          <input type="text" class="form-control" name="artist" placeholder="Artist" ><br>
-          <input type="text" class="form-control" name="album" placeholder="Album" ><br>
-          <input type="number" class="form-control" name="release-year" placeholder="Release Year" ><br>
-          <input type="text" class="form-control" name="description" placeholder="Description" ><br>
-          <input type="submit" class="btn btn-default" value="ADD">
-        </form>
+      <aside class="col-md-3">
+        <div class="row  form-panel">
+          <h2>ADD ALBUM</h2>
+          <form class="add-album" action="index.php" method="post">
+            <input type="text" class="form-control" name="artist" placeholder="Artist" ><br>
+            <input type="text" class="form-control" name="album" placeholder="Album" ><br>
+            <input type="number" class="form-control" name="release-year" placeholder="Release Year" ><br>
+            <input type="text" class="form-control" name="description" placeholder="Description" ><br>
+            <input type="submit" class="btn btn-default" value="ADD ALBUM">
+          </form>
+          <?php include 'src/addAlbum.php' ?>
+        </div>
         <?php include 'src/addAlbum.php' ?>
+        <div class="row  form-panel">
+          <h2>ADD USER</h2>
+          <form class="add-user" action="index.php" method="post">
+            <input type="text" class="form-control" name="newUser" placeholder="Name" ><br>
+            <input type="password" class="form-control" name="newPassword" placeholder="Password" ><br>
+            <input type="password" class="form-control" name="adminPassword" placeholder="Admin Password" ><br>
+            <input type="submit" class="btn btn-default" value="ADD USER">
+          </form>
+        </div>
       </aside>
-
       <article class="col-md-8 result-table">
         <?php include 'src/login.php' ?>
         <?php include 'src/logout.php' ?>
