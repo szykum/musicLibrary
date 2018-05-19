@@ -104,6 +104,6 @@ h2{
   float: left;
 }
 
-tr:hover{
+tbody tr:hover{
   background: rgba(255, 110, 0, 0.5);
 }

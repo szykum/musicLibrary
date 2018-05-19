@@ -14,7 +14,7 @@ if(isset($_SESSION['login']))
      $getID = $getID->fetch_assoc();
      $getID = $getID["id"];
      //echo $getID;
-     $selectAlbums = "SELECT * FROM album WHERE ownerID = '$getID'";
+     $selectAlbums = "SELECT * FROM album WHERE ownerID = $getID ORDER BY artist, `release-year`";
      $getAlbums = $db->query($selectAlbums);
      echo "
        <table class='table table-bordered'>
