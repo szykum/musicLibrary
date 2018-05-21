@@ -1,7 +1,6 @@
 <?php
 if(isset($_REQUEST['artist']) && isset($_REQUEST['album']) && isset($_REQUEST['release-year']) && isset($_REQUEST['description']) && isset($_SESSION['login']))
 {
-
   $artist = $_REQUEST['artist'];
   $album = $_REQUEST['album'];
   $releaseY =   $_REQUEST['release-year'];
