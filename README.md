@@ -1,5 +1,5 @@
 # musicLibrary
 
-#Visitors:
-#Login: guest
-#Pswd: 123456789
+Visitors:
+Login: guest
+Pswd: 123456789
