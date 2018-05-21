@@ -6,4 +6,4 @@
       $db->query($q);
       echo "<script>alert('Successfully removed');</script>";
     }
-  ?>
+?>

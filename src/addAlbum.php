@@ -8,7 +8,6 @@ if(isset($_REQUEST['artist']) && isset($_REQUEST['album']) && isset($_REQUEST['r
   $description= $_REQUEST['description'];
   $login = $_SESSION['login'];
   $db = new Mysqli('localhost', 'root', '', 'musiclibrary');
-
   $checkExist = "SELECT COUNT(1) FROM `album` WHERE artist='$artist' AND name='$album'";
   $exist = $db->query($checkExist);
   $exist = $exist->fetch_row();

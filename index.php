@@ -20,7 +20,6 @@
           <div class="item"><img src="images/4.jpg"/></div>
         </div>
     </header>
-
     <div class="row main-content">
       <aside class="col-md-3">
         <div class="row  form-panel">
@@ -43,17 +42,13 @@
             <input type="password" class="form-control" name="adminPassword" placeholder="Admin Password" ><br>
             <input type="submit" class="btn btn-default" value="ADD USER">
             <?php include 'src/addUser.php' ?>
-
           </form>
         </div>
       </aside>
       <article class="col-md-8 result-table">
         <?php include 'src/login.php' ?>
         <?php include 'src/logout.php' ?>
-
       </article>
-
     </div>
-
   </body>
 </html>

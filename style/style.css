@@ -48,10 +48,12 @@ header{
   width: 100%;
 
 }
+
 .table > tbody > tr > td{
   vertical-align: middle;
   line-height: normal;
 }
+
 .table td{
   word-wrap: break-word;
 }
@@ -59,6 +61,7 @@ header{
 th{
   text-align: center;
 }
+
 .add-album input, .add-user input{
   width: 80%;
   margin-left:10%;
@@ -69,6 +72,7 @@ th{
   width: 30%;
   margin: 0 0 15px 5px;
 }
+
 .logoutForm input{
   width: 100%;
   margin: 0 0 15px 5px;

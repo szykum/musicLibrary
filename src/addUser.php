@@ -20,12 +20,7 @@ if(isset($_REQUEST['newUser']) && isset($_REQUEST['newPassword']) && isset($_REQ
     else
       echo "<script>alert('Failure admin authorization');</script>";
   }
-  else {
+  else
     echo "<script>alert('Login $newUser already exist');</script>";
-  }
-
-
 }
-
-
 ?>
